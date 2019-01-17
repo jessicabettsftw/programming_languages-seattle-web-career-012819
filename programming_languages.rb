@@ -5,7 +5,7 @@ def reformat_languages(languages)
       type_info.each do |type_label, type|
         #puts "#{name}, #{type}, #{style}"
         if reformated.keys.include? name
-          puts reformated[name][:type][:style]
+          puts reformated[name][:style]
         else
         reformated[name] = {:type => type, :style => [style]}
         end
