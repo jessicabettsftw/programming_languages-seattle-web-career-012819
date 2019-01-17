@@ -1,3 +1,16 @@
 def reformat_languages(languages)
-  # your code here
+  reformated = {}
+  languages.each do |style, language_info|
+    language_info.each do |name, type_info|
+      type_info.each do |type_label, type|
+        #puts "#{name}, #{type}, #{style}"
+        if reformated.keys.include? name
+          reformated[name][:style] << style
+        else
+        reformated[name] = {:type => type, :style => [style]}
+        end
+      end
+    end
+  end
+  reformated
 end
