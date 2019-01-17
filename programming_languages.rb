@@ -4,6 +4,7 @@ def reformat_languages(languages)
     language_info.each do |name, type_info|
       type_info.each do |type_label, type|
         #puts "#{name}, #{type}, #{style}"
+        if reformated
         reformated[name] = {:type => type, :style => [style]}
       end
     end
